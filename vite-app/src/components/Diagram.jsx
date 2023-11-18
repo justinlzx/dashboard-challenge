@@ -9,16 +9,20 @@ function Diagram({ title, data, type, columns, width, height, options}) {
     return (
         <>
             <div className="card">
-            <h3>{title}</h3>
+            <h3 className="text-center mt-2">{title}</h3>
 
-                <Chart
+            <div className="mb-2">
+                <Chart 
                     chartType={ type }
                     data={ chartData }
                     width={ width }
                     height={ height }
-                    options={options}
-                    legendToggle
+                    options={ options }
+                    
+                    // legendToggle
                 />
+            </div>
+
             </div>
            
         </>
