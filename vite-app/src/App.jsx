@@ -22,68 +22,76 @@ function App() {
     <>
       {data && (
         <>
-          <div className="row-col">
-              <div className='container'>
+            <div className="row">
+              <div className="col-6"></div>
+                            <div className="col-6"></div>
+
+            </div>
+            <div className="container-fluid">
+              
+              <div className="row my-3">
                 <Header text='Weather Report' />
-                <div className="row mb-3">
-                  <Diagram
-                    title='Min & Max Temperature / Day'
-                    type="LineChart"
-                    data={data.temperature}
-                    width="100%"
-                    height="400px"
-                    columns={['Date', 'Min. Temperature', 'Max. Temperature' ]}
-                    options = {{
-                      hAxis: { title: "Date", titleTextStyle: { color: "#333" } },
-                      vAxis: { title: 'Temperature/C', minValue: 0 },
-                      curveType: "function",
-                      legend: { position: "bottom" },
-                    }}
-                  />
-                </div>
-
-                <div className="row">
-                    <div className="col-md-6 col-sm-12 px-0">
-                      <Diagram
-                        title='Average Relative Humidity / Day'
-                        type="ColumnChart"
-                        width="100%"
-                        height="400px"
-                        data={data.humidity}
-                        columns={['Date', 'Average Relative Humidity' ]}
-                        options = {{
-                          hAxis: { title: "Date", titleTextStyle: { color: "#333" } },
-                          vAxis: { title: 'Relative Humidity/%', minValue: 0 },
-                          curveType: "function",
-                          legend: {position: 'top'},
-                        }}
-                      />
-                    </div>
-
-                    <div className="col-md-6 col-sm-12 col pe-0">
-                      <Diagram
-                        title='Direct Radiation / Day'
-                        type="AreaChart"
-                        width="100%"
-                        height="400px"
-                        data={data.radiation}
-                        columns={['Date', 'Min. Temperature' ]}
-                        options = {{
-                          hAxis: { title: "Date", titleTextStyle: { color: "#333" } },
-                          vAxis: { title: 'Radiation/W/m²', minValue: 0 },
-                          curveType: "function",
-                          legend: {position: 'top'},
-
-                        }}
-                      />
-                    </div>
-                </div>
               </div>
-          </div>
+
+              <div className="row mb-2">
+                <Diagram
+                  title='Min & Max Temperature / Day'
+                  type="LineChart"
+                  data={data.temperature}
+                  width="100%"
+                  height="400px"
+                  columns={['Date', 'Min. Temperature', 'Max. Temperature' ]}
+                  options = {{
+                    hAxis: { title: "Date", titleTextStyle: { color: "#333" } },
+                    vAxis: { title: 'Temperature/C', minValue: 0 },
+                    curveType: "function",
+                    legend: { position: "top", alignment: "center" },
+                  }}
+                />
+              </div>
+
+
+            </div>
+
+            <div className="row justify-content-center">
+                  <div className="col-md-6 col-sm-12">
+                    <Diagram
+                      title='Average Relative Humidity / Day'
+                      type="ColumnChart"
+                      width="100%"
+                      height="400px"
+                      data={data.humidity}
+                      columns={['Date', 'Average Relative Humidity' ]}
+                      options = {{
+                        hAxis: { title: "Date", titleTextStyle: { color: "#333" } },
+                        vAxis: { title: 'Relative Humidity/%', minValue: 0 },
+                        curveType: "function",
+                        legend: {position: 'top'},
+                      }}
+                    />
+                  </div>
+
+                  <div className="col-md-6 col-sm-12">
+                    <Diagram
+                      title='Direct Radiation / Day'
+                      type="AreaChart"
+                      width="100%"
+                      height="400px"
+                      data={data.radiation}
+                      columns={['Date', 'Min. Temperature' ]}
+                      options = {{
+                        hAxis: { title: "Date", titleTextStyle: { color: "#333" } },
+                        vAxis: { title: 'Radiation/W/m²', minValue: 0 },
+                        curveType: "function",
+                        legend: {position: 'top'},
+ 
+                      }}
+                    />
+                  </div>
+              </div>
+          {/* </div> */}
         </>
-      ) 
-        
-      }
+      )}
     </>
   );
 }

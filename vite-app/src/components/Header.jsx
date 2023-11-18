@@ -1,7 +1,9 @@
 function Header({text}){
 
     return (
-        <h1 className="text-center">{ text }</h1>
+        <div className="card p-0">
+                    <h1 className="text-center mt-2">{ text }</h1>
+        </div>
     )
 }
 

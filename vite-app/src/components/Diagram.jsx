@@ -8,7 +8,7 @@ function Diagram({ title, data, type, columns, width, height, options}) {
     console.log(chartData)
     return (
         <>
-            <div className="card">
+            <div className="border rounded-2 shadow-sm mb-2">
             <h3 className="text-center mt-2">{title}</h3>
 
             <div className="mb-2">
