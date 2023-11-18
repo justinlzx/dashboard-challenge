@@ -3,17 +3,19 @@ This weather dashboard displays real time information about temperature, relativ
 
 It is written in React JS, and styled with Bootstrap and utilises `react-google-charts` for data visualisation
 
-Accessing the dashboard locally: 
+## Accessing the dashboard locally: 
+
+1. Navigate into the project folder
 ```
   cd vite-app
 ```
 
-Install required dependencies: 
+2. Install required dependencies: 
 ```
   npm install
 ```
 
-Run development server 
+3. Run development server 
 ```
   npm run dev
 ```
