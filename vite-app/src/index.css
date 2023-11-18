@@ -1,4 +1,16 @@
-:root {
-  font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+#temperature > div {
+  background-color: #e0f1fab9;
 }
+
+#humidity > div {
+  background-color: #d9d1f8ae;
+}
+
+#radiation > div {
+  background-color: #cad5fcbe
+}
+
+div > #header > div {
+  background-color: rgba(205, 243, 239, 0.599);
+}
+
