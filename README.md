@@ -19,3 +19,5 @@ It is written in React JS, and styled with Bootstrap and utilises `react-google-
 ```
   npm run dev
 ```
+
+4. Run localhost on your browser
