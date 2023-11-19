@@ -86,7 +86,7 @@ function App() {
 
                   <div className="col-md-6 col-sm-12" id="radiation">
                     <Diagram
-                      title='Direct Radiation / Day'
+                      title='Average Direct Radiation / Day'
                       type="AreaChart"
                       width="100%"
                       height="400px"
